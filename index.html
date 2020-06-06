@@ -9,13 +9,15 @@
   When present, it specifies that the script 
   is executed when the page has finished parsing
  -->
- <script src="./js-only.js" defer></script>
+
+ <!--Always import the result of the compilation-->
+ <script src="./basics.js" defer></script>
 </head>
 
 <body>
  <input id="num1" type="number" placeholder="num1">
  <input id="num2" type="number" placeholder="num2">
- <button type="submit">Add</button>
+ <button type="submit">Add!</button>
 </body>
 
 </html>
