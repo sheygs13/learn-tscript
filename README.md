@@ -1,6 +1,6 @@
 ## Learn Typescript
 
 ```shell
-   # To compile typescript to Javascript
-   tsc <name of file>
+   # To compile ts file to js file
+   tsc <name of file>.js
 ```
