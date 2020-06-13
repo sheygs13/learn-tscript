@@ -5,8 +5,8 @@ function sum(num1: number, num2: number, showResult: boolean, phrase: string) {
  }
  return add;
 }
-const number1 = 5;
-const number2 = 6.4;
+const num1 = 5;
+const num2 = 6.4;
 const printResult = true;
 const resultPhrase = 'Result is: ';
-sum(number1, number2, printResult, resultPhrase);
+sum(num1, num2, printResult, resultPhrase);
