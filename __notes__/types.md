@@ -5,12 +5,14 @@
 - `boolean` ( `true/false` )
 
 - `object` ( `{ age: 25}` )
-- `array` (Any JS array, type can be flexible or strict (regarding the element types))
-- `tuple` (Added by Typescript: Fixed-length array)
+- `Array` (Any JS array, type can be flexible or strict (regarding the element types))
+- `Tuple` (Added by Typescript: Fixed (type)-length array)
+- `Enum` (enum { NEW, OLD } ) (Added by Typescript: Automatically enumerated global constant identifiers)
+- `Any` `*` (Any kind of value, no specific type assignment )
 
-TypeScript's type system only helps you during development (i.e. before the code get's compiled).
-The key difference is: JavaScript uses `"dynamic types"` (_resolved at runtime_) while TypeScript uses `"static types"` (_set during development_)
-When declaring a variable whose value is not known, always add the type of value to the variable
+  TypeScript's type system only helps you during development (i.e. before the code get's compiled).
+  The key difference is: JavaScript uses `"dynamic types"` (_resolved at runtime_) while TypeScript uses `"static types"` (_set during development_)
+  When declaring a variable whose value is not known, always add the type of value to the variable
 
 ```ts
 let count: number;
@@ -42,14 +44,14 @@ const person = {
 ```
 
 ```ts
-// array of strings
-const str: string[] = ["mike", "sumbo"];
+/* Ways of declaring an array */
 
-// array of numbers
-const nums: number[] = [5, 4];
+// Method 1
+const str: string[] = ["post", "get", "put"];
+const nums: number[] = [5, 4, -6.45];
 
-// array of any type
-const any: any[] = [1, true, "3", function hell() {}, undefined, null];
+// Method 2
+let fruits: Array<string> = ["Apples", "Oranges", "Bananas"];
 ```
 
-With Tuples we can define what type of data (variable type) can be stored in every position ( or few starting positions ) inside of an array. Tuples are very useful if you know the type of data in advance. The `push` method in array is the only exception that negates the fixed-length of Tuples.
+- With Tuples we can define what type of data (variable type) can be stored in every position ( or few starting positions ) inside of an array. Tuples are very useful if you know the type of data in advance. The `push` method in array is the only exception that negates the fixed-length of Tuples.
