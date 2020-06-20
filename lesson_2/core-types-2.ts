@@ -7,7 +7,7 @@ const person: {
 } = {
   name: "Olusegun",
   age: 24,
-  hobbies: ["sports", "cooking", "meditating"],
+  hobbies: ["sports", "cooking", "surfing"],
   role: [2, "author"],
 };
 
@@ -19,11 +19,7 @@ let otherTodos: string[];
 otherTodos = ["gym", "movies"];
 console.log([...person.hobbies, ...otherTodos]);
 
-/* 
-   Assign the hobbies array 
-   of  type 'string[]'
-   after destructuring
-*/
+// Typescript strict destructuring
 const { hobbies }: { hobbies: string[] } = person;
 for (const hobby of hobbies) {
   console.log(hobby);
