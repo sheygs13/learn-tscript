@@ -10,9 +10,31 @@
 - `Enum` (enum { NEW, OLD } ) (Added by Typescript: Automatically enumerated global constant identifiers)
 - `Any` `*` (Any kind of value, no specific type assignment )
 
-  TypeScript's type system only helps you during development (i.e. before the code get's compiled).
-  The key difference is: JavaScript uses `"dynamic types"` (_resolved at runtime_) while TypeScript uses `"static types"` (_set during development_)
-  When declaring a variable whose value is not known, always add the type of value to the variable
+- `union`(To combine multiple types into one type)
+
+```ts
+function print(text: string | string[]): string {
+  if (typeof text === "string") {
+    return text;
+  }
+
+  // compiler now knows that you can use join
+  // and that variable type is definitely string[]
+
+  return text.join(" ");
+}
+
+let x = print("hello text");
+let y = print(["hello", "text", "array"]);
+```
+
+- `literal`
+
+## Note
+
+- TypeScript's type system only helps you during development (i.e. before the code get's compiled).
+- The key difference is: JavaScript uses `"dynamic types"` (_resolved at runtime_) while TypeScript uses `"static types"` (_set during development_)
+- When declaring a variable whose value is not known, always add the type of value to the variable.
 
 ```ts
 let count: number;
@@ -21,6 +43,10 @@ function multiply() {
   return (count += 5);
 }
 ```
+
+- With Tuples we can define what type of data (variable type) can be stored in every position ( or few starting positions ) inside of an array. Tuples are very useful if you know the type of data in advance. The `push` method in array is the only exception that negates the fixed-length of Tuples.
+
+## Ways of Declaring Objects
 
 ```ts
 // good
@@ -43,9 +69,9 @@ const person = {
 };
 ```
 
-```ts
-/* Ways of declaring an array */
+## Ways of Declaring Arrays
 
+```ts
 // Method 1
 const str: string[] = ["post", "get", "put"];
 const nums: number[] = [5, 4, -6.45];
@@ -53,5 +79,3 @@ const nums: number[] = [5, 4, -6.45];
 // Method 2
 let fruits: Array<string> = ["Apples", "Oranges", "Bananas"];
 ```
-
-- With Tuples we can define what type of data (variable type) can be stored in every position ( or few starting positions ) inside of an array. Tuples are very useful if you know the type of data in advance. The `push` method in array is the only exception that negates the fixed-length of Tuples.
