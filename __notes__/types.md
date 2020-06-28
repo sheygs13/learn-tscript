@@ -10,7 +10,7 @@
 - `Enum` (enum { NEW, OLD } ) (Added by Typescript: Automatically enumerated global constant identifiers)
 - `Any` `*` (Any kind of value, no specific type assignment )
 
-- `union`(To combine multiple types into one type)
+- `union types`(To combine multiple types into one type)
 
 ```ts
 function print(text: string | string[]): string {
@@ -28,7 +28,8 @@ let x = print("hello text");
 let y = print(["hello", "text", "array"]);
 ```
 
-- `literal`
+- `literal types` (particularly useful when used in conjunction with literal types)
+  - `string literal types`
 
 ## Note
 
