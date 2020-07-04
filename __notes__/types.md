@@ -11,6 +11,7 @@
 - `Any` `*` (Any kind of value, no specific type assignment )
 
 - `union types`(To combine multiple types into one type)
+- The `type` keyword is used to define an alias for a type.
 
 ```ts
 function print(text: string | string[]): string {
