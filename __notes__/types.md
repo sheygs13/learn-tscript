@@ -9,9 +9,9 @@
 - `Tuple` (Added by Typescript: Fixed (type)-length array)
 - `Enum` (enum { NEW, OLD } ) (Added by Typescript: Automatically enumerated global constant identifiers)
 - `Any` `*` (Any kind of value, no specific type assignment )
+- `void` (Return type of nothing)
 
 - `union types`(To combine multiple types into one type)
-- The `type` keyword is used to define an alias for a type.
 
 ```ts
 function print(text: string | string[]): string {
@@ -37,6 +37,7 @@ let y = print(["hello", "text", "array"]);
 - TypeScript's type system only helps you during development (i.e. before the code get's compiled).
 - The key difference is: JavaScript uses `"dynamic types"` (_resolved at runtime_) while TypeScript uses `"static types"` (_set during development_)
 - When declaring a variable whose value is not known, always add the type of value to the variable.
+- The `type` keyword is used to define an alias for a type.
 
 ```ts
 let count: number;
@@ -80,4 +81,21 @@ const nums: number[] = [5, 4, -6.45];
 
 // Method 2
 let fruits: Array<string> = ["Apples", "Oranges", "Bananas"];
+```
+
+```ts
+// implicit return type
+function add(n1: number, n2: number) {
+  return n1 + n2;
+}
+
+// explicit return type
+function add(n1: number, n2: number): string {
+  return String(n1) + String(n2);
+}
+
+// void return type
+function printResult(n: number) {
+  console.log("Num: ", n);
+}
 ```
