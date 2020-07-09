@@ -139,8 +139,3 @@ let sum: (n1: number, n2: number) => number;
 sum = add;
 console.log(sum(5, 7));
 ```
-
-## Function with Callback
-
-```ts
-```
