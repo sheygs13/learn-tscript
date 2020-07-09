@@ -30,7 +30,10 @@ let y = print(["hello", "text", "array"]);
 ```
 
 - `literal types` (particularly useful when used in conjunction with literal types)
+
   - `string literal types`
+
+- `Function`
 
 ## Note
 
@@ -98,4 +101,46 @@ function add(n1: number, n2: number): string {
 function printResult(n: number) {
   console.log("Num: ", n);
 }
+```
+
+## Functions
+
+### Generic Function Type
+
+```ts
+let sum: Function;
+
+sum = () => {
+  console.log("Generic");
+};
+console.log(sum());
+```
+
+### Function Return Type
+
+```ts
+function add(): string {
+  return "5";
+}
+
+let sum: () => string;
+sum = add;
+console.log(sum());
+```
+
+### Strict Function Return Type
+
+```ts
+function add(s1: number, s2: number): number {
+  return s1 + s2;
+}
+
+let sum: (n1: number, n2: number) => number;
+sum = add;
+console.log(sum(5, 7));
+```
+
+## Function with Callback
+
+```ts
 ```
