@@ -34,6 +34,8 @@ let y = print(["hello", "text", "array"]);
   - `string literal types`
 
 - `Function`
+- `never` - Used in positions where there will not or should not be a value.
+- `unknown` - Used where there will be a value, but it might have any type.
 
 ## Note
 
